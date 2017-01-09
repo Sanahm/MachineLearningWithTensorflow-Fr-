@@ -2,7 +2,6 @@ from tensorflow.examples.tutorials.mnist import input_data
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
-import cv2 #just for waitKey
 
 #some pretty interresting functions
 def plot_images(images, cls_true,cls_pred=None):
@@ -99,10 +98,10 @@ num_classes = 10 #10 classes possibles 0-9
 
 mnist = input_data.read_data_sets("/tmp/tensorflow",one_hot=True)
 
-#mnist contient est divisé en 3 sous-ensembles:
+#mnist est divisé en 3 sous-ensembles:
 #mnist.train la base d'apprentissage contenant (mnist.train.images les images et
-    #mnist.train.labels le vrai label de chacune de ces images codé en one-hot cad que le label
-    #7 --> [0,0,0,0,0,0,0,1,0,0] un vecteur de taille 10 avec un à la 7 case pour dire label vaut 7
+    #mnist.train.labels les vrais labels de ces images codés en one-hot càd que le label
+    #7 s'écrira [0,0,0,0,0,0,0,1,0,0] un vecteur de taille 10 avec un "1" à la 7 case pour dire que le label vaut 7
 #mnist.test la base de test avec également ces images et ces labels
 #mnist.validation la bas de validation avec également ces images et ces labels
 
