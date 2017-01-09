@@ -30,14 +30,14 @@ On récupère ensuite les images de la base de données MNIST. Elles seront tél
 
 la base de données mnist est divisé en 3 sous-ensembles:
 
-**mnist.train :** la base d'apprentissage contenant lui même
+**mnist.train :** la base d'apprentissage contenant elle même
 >>> **mnist.train.images** les images de la base
 
 >>> **mnist.train.labels** les vrais labels de ces images codés en **one-hot** càd que le label 7 par example 				s'écrira [0,0,0,0,0,0,0,1,0,0] un vecteur de taille 10 avec un "1" à la 7 case pour dire que le label 				vaut 7
 
-**mnist.test :** la base de test avec également ces images et ces labels
+**mnist.test :** la base de test avec également ses images et ses labels
 
-**mnist.validation :** la bas de validation avec également ces images et ces labels
+**mnist.validation :** la bas de validation avec également ses images et ses labels
 
 Le codage en one hot est utile pour le travail à venir mais nous aurons également besoin de la vraie valeur du label pour cela nous allons ajouter un autre champ cls (pour dire class) au champ test qui contient les labels sous forme de nombre. Pour cela, on prend chaque label par ex [0,0,0,0,0,0,1,0,0,0] et on convertit avec argmax() en 6. argmax() retourne l'indice du maximum du vecteur.
 
