@@ -254,9 +254,9 @@ with tf.Session() as sess:
     #on fait passer la base de test pour voir a quel point on est bon!
     print_accuracy(mnist.test,sess)
     feed_dict_test = {x:mnist.test.images,y:mnist.test.labels,y_cls:mnist.test.cls}
-    print_unmatched(sess,feed_dict_test,mnist.test)
-    print_matched(sess,feed_dict_test,mnist.test)
-    plot_weights(sess)
+    #print_unmatched(sess,feed_dict_test,mnist.test)
+    #print_matched(sess,feed_dict_test,mnist.test)
+    #plot_weights(sess)
     plt.show()
     plt.close()
 
